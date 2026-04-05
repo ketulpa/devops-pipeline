@@ -1,13 +1,15 @@
 from flask import Flask, jsonify
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 
 @app.route('/')
 def home():
     return jsonify({
         "status": "running",
         "message": "DevOps Pipeline - Ketul Patel",
-        "version": "2.0"
+        "version": "3.0"
     })
 
 @app.route('/health')
