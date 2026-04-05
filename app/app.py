@@ -7,7 +7,7 @@ def home():
     return jsonify({
         "status": "running",
         "message": "DevOps Pipeline - Ketul Patel",
-        "version": "1.0"
+        "version": "2.0"
     })
 
 @app.route('/health')
