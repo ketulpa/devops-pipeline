@@ -35,7 +35,7 @@ receivers:
         title: '🔴 ALERT: {{ .CommonLabels.alertname }}'
         text: '*Server:* {{ .CommonLabels.instance }}\n*Issue:* {{ .CommonAnnotations.summary }}'
     email_configs:
-      - to: 'ketul9patel4@gmail.com'
+      - to: 'YOUR_eMAIL_ADDRESS'
         headers:
           Subject: '🚨 ESCALATION: {{ .CommonLabels.alertname }} not resolved after 5 alerts'
 
