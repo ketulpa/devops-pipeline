@@ -28,7 +28,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "efi62cdqw969sc" },
-          "expr": "100 - (avg by (instance) (rate(windows_cpu_time_total{mode='idle', instance='173.248.136.194:9182'}[5m])) * 100)",
+          "expr": "100 - (avg by (instance) (rate(windows_cpu_time_total{mode='idle', instance='YOUR_TARGET_IP:9182'}[5m])) * 100)",   // add your Windowds IP address here
           "legendFormat": "CPU %"
         }
       ]
@@ -54,7 +54,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "efi62cdqw969sc" },
-          "expr": "windows_memory_available_bytes{instance='173.248.136.194:9182'}",
+          "expr": "windows_memory_available_bytes{instance='YOUR_TARGET_IP:9182'}",  // add your Windowds IP address here
           "legendFormat": "Available"
         }
       ]
@@ -78,7 +78,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "efi62cdqw969sc" },
-          "expr": "up{instance='173.248.136.194:9182'}",
+          "expr": "up{instance='YOUR_TARGET_IP:9182'}",   // add your Windowds IP address here
           "legendFormat": "Windows VPS"
         }
       ]
@@ -104,7 +104,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "efi62cdqw969sc" },
-          "expr": "windows_logical_disk_free_bytes{instance='173.248.136.194:9182', volume!='HarddiskVolume1'}",
+          "expr": "windows_logical_disk_free_bytes{instance='YOUR_TARGET_IP:9182', volume!='HarddiskVolume1'}",  // add your Windowds IP address here
           "legendFormat": "Drive {{volume}}"
         }
       ]
@@ -122,12 +122,12 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "efi62cdqw969sc" },
-          "expr": "rate(windows_net_bytes_received_total{instance='173.248.136.194:9182'}[5m])",
+          "expr": "rate(windows_net_bytes_received_total{instance='YOUR_TARGET_IP:9182'}[5m])",  // add your Windowds IP address here
           "legendFormat": "In - {{nic}}"
         },
         {
           "datasource": { "type": "prometheus", "uid": "efi62cdqw969sc" },
-          "expr": "rate(windows_net_bytes_sent_total{instance='173.248.136.194:9182'}[5m])",
+          "expr": "rate(windows_net_bytes_sent_total{instance='YOUR_TARGET_IP:9182'}[5m])",  // add your Windowds IP address here
           "legendFormat": "Out - {{nic}}"
         }
       ]
