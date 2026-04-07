@@ -1,8 +1,8 @@
 global:
   resolve_timeout: 5m
-  smtp_smarthost: 'smtp.gmail.com:587'
-  smtp_from: 'ketul9patel4@gmail.com'
-  smtp_auth_username: 'ketul9patel4@gmail.com'
+  smtp_smarthost: 'smtp.gmail.com:587' // Use your actual email hostname here wiht SMTP port
+  smtp_from: 'YOUR_eMAIL_ADDRESS'
+  smtp_auth_username: 'YOUR_eMAIL_ADDRESS'
   smtp_auth_password: "YOUR_APP_PASSWORD"
   smtp_require_tls: true
 
