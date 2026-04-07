@@ -16,7 +16,7 @@ scrape_configs:
 
   - job_name: 'windows-vps'
     static_configs:
-      - targets: ['173.248.136.194:9182']
+      - targets: ['TARGET_IP_ADDRESS:9182'] // Use your target devices IP address here
 
   - job_name: 'flask-app'
     static_configs:
